@@ -1,4 +1,4 @@
-const Command = require('../../Structures/Command');
+const {Command} = require('reconlx');
 const {MessageEmbed} = require('discord.js');
 
 module.exports = new Command({
