@@ -1,10 +1,10 @@
-const { Client ,Collection , Intents } = require('discord.js');
+const { Client ,Collection } = require('discord.js');
 const { Token , mongooseConnectionString , guildId  } = require('../Configs/config.json');
 const mongoose = require('mongoose');
 class ExtendedClient extends Client{
 
-    constructor(){
-        super({intents: [Intents.FLAGS.GUILDS , Intents.FLAGS.GUILD_MEMBERS , Intents.FLAGS.GUILD_MESSAGES , Intents.FLAGS.GUILD_PRESENCES ] , partials:['CHANNEL']});
+    constructor(options){
+        super(options);
         this.commands = new Collection();
         this.events = new Collection();
     }
